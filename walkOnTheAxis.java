@@ -10,7 +10,7 @@ class walkOnTheAxis {
 
     public int solution(int n) {
         try { return answers.get(n); }
-        catch(IndexOutOfBoundsException iob) {
+        catch(IndexOutOfBoundsException ignore) {
             for(int i = answers.size(); i <= n; i++) {
                 answers.add(2*i + answers.get(i-2) + 1);
             }
